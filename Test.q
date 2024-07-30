@@ -3,3 +3,6 @@ taenun:.Q.en[`:Data2;tab] // this code line we need to enumerate the sym
 \ts `:Data2/Tables/ set taenun
 
 \ts `:Data/Tables/ set .Q.en[`:Data;tab] // same code
+
+show get `:Data/Tables/
+show get `:Data2/Tables/
