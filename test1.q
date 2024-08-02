@@ -29,12 +29,22 @@
 
 // update newCol:size from `:tradesplay/trade // cant update the file
 
-`:tradesplay/tnew/ set .Q.en[`:tradesplay/tnew;([]s:`JPM`IBM`MSFT;price:10 20 30;size:100 200 300)]
-show get `:tradesplay/tnew
+// `:tradesplay/tnew/ set .Q.en[`:tradesplay/tnew;([]s:`JPM`IBM`MSFT;price:10 20 30;size:100 200 300)]
+// show get `:tradesplay/tnew
 
-`:tradesplay/tnew/ upsert .Q.en[`:tradesplay/tnew;([]s:`KX`GS;price:40 50;size:400 500)]
-show get `:tradesplay/tnew
+// `:tradesplay/tnew/ upsert .Q.en[`:tradesplay/tnew;([]s:`KX`GS;price:40 50;size:400 500)]
+// show get `:tradesplay/tnew
 
-`:tmp/ upsert ([] a:10 20 30; b:1.1 2.2 3.3)
-`:tmp/ insert ([]a: 10 20 30;b: 1.1 2.2 3.3) 
+// `:tmp/ upsert ([] a:10 20 30; b:1.1 2.2 3.3)
+// `:tmp/ insert ([]a: 10 20 30;b: 1.1 2.2 3.3) 
 // `:newTmp/ insert ([]a: 10 20 30;b: 1.1 2.2 3.3) // cant use to create a table
+
+`:simpleAnyMap set (1 2; 2 3;2 3f;2 4e)
+
+show get `:simpleAnyMap
+type get `:simpleAnyMap
+type each get `:simpleAnyMap
+
+f where (f:key `:.)like "simpleAnyMap"
+
+`:symbolAnyMap set (`a`b!1 2; `d`e!2 3;`e`c!2 3f;2 4e)
