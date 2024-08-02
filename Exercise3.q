@@ -1,0 +1,1 @@
+show select avg price by sym from `:tradesplay/trade
